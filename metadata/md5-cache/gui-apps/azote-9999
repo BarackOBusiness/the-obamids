@@ -1,0 +1,14 @@
+BDEPEND=dev-lang/python >=x11-libs/gtk+-3.0.0 dev-python/pycairo dev-python/send2trash >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=dev-lang/python >=x11-libs/gtk+-3.0.0 dev-python/pycairo dev-python/send2trash
+DESCRIPTION=A gtk based background and color manager for sway.
+EAPI=8
+HOMEPAGE=https://github.com/marcusbritanicus/QtGreet
+INHERIT=git-r3
+KEYWORDS=-*
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=dev-lang/python >=x11-libs/gtk+-3.0.0 dev-python/pycairo dev-python/send2trash
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=d7cea717a75cf3752916ddd27888ad27
