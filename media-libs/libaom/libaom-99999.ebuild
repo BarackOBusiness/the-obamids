@@ -4,21 +4,13 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..10} )
-inherit cmake-multilib python-any-r1
+inherit cmake-multilib python-any-r1 git-r3
+EGIT_REPO_URI="https://github.com/clybius/aom-av1-lavish.git"
+EGIT_BRANCH="Endless_Butter"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
-if [[ ${PV} == *9999* ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://gitlab.com/shssoichiro/aom.git"
-	EGIT_BRANCH="patched"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
-else
-	SRC_URI="https://github.com/BlueSwordM/aom-av1-psy/archive/refs/tags/full-aom-av1-psy-0.1.4-alpha.tar.gz"
-	S="${WORKDIR}/aom-av1-psy-full-aom-av1-psy-0.1.4-alpha"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~sparc x86"
-fi
-
-DESCRIPTION="Alliance for Open Media AV1 Codec - BlueSwordM fork for improved psychovisual tuning"
-HOMEPAGE="https://gitlab.com/shssoichiro/aom"
+DESCRIPTION="Alliance for Open Media AV1 Codec - fork for improved psychovisual tuning"
+HOMEPAGE="https://github.com/Clybius/aom-av1-lavish"
 
 LICENSE="BSD-2"
 SLOT="0/3"
@@ -60,6 +52,7 @@ multilib_src_configure() {
 		-DENABLE_TESTS=OFF
 		-DENABLE_TOOLS=ON
 		-DENABLE_WERROR=OFF
+		-DCONFIG_FRAME_PARALLEL_ENCODE=1
 
 		# Needs libjxl, currently unpackaged.
 		-DCONFIG_TUNE_BUTTERAUGLI=$(usex butteraugli 1 0)
