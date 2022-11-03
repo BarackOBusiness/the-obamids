@@ -8,8 +8,8 @@ inherit cmake-multilib python-any-r1
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://gitlab.com/shssoichiro/aom.git"
-	EGIT_BRANCH="patched"
+	EGIT_REPO_URI="https://github.com/WoofinaS/aom.git"
+	EGIT_BRANCH="main"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 else
 	SRC_URI="https://github.com/BlueSwordM/aom-av1-psy/archive/refs/tags/full-aom-av1-psy-0.1.4-alpha.tar.gz"
