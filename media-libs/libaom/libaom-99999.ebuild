@@ -6,7 +6,7 @@ EAPI=8
 PYTHON_COMPAT=( python3_{8..10} )
 inherit cmake-multilib python-any-r1 git-r3
 EGIT_REPO_URI="https://github.com/clybius/aom-av1-lavish.git"
-EGIT_BRANCH="Endless_Butter"
+EGIT_BRANCH="Endless_Merging"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 DESCRIPTION="Alliance for Open Media AV1 Codec - fork for improved psychovisual tuning"

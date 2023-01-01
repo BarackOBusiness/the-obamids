@@ -86,7 +86,7 @@ FFMPEG_FLAG_MAP=(
 		jpeg2k:libopenjpeg jpegxl:libjxl bluray:libbluray gme:libgme gsm:libgsm
 		libaribb24 mmal modplug:libmodplug opus:libopus libilbc librtmp ssh:libssh
 		speex:libspeex srt:libsrt rist:librist svg:librsvg nvenc:ffnvcodec
-		vorbis:libvorbis vpx:libvpx zvbi:libzvbi
+		vorbis:libvorbis vpx:libvpx zvbi:libzvbi vapoursynth:vapoursynth
 		# libavfilter options
 		appkit
 		bs2b:libbs2b chromaprint cuda:cuda-llvm flite:libflite frei0r vmaf:libvmaf
@@ -226,6 +226,7 @@ RDEPEND="
 	jack? ( virtual/jack[${MULTILIB_USEDEP}] )
 	jpeg2k? ( >=media-libs/openjpeg-2:2[${MULTILIB_USEDEP}] )
 	jpegxl? ( >=media-libs/libjxl-0.7.0[$MULTILIB_USEDEP] )
+	vapoursynth? ( media-libs/vapoursynth )
 	lcms? ( >=media-libs/lcms-2.13:2[$MULTILIB_USEDEP] )
 	libaom? ( >=media-libs/libaom-1.0.0-r1:=[${MULTILIB_USEDEP}] )
 	libaribb24? ( >=media-libs/aribb24-1.0.3-r2[${MULTILIB_USEDEP}] )
