@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 DIST v4.1.1.tar.gz 2306575 BLAKE2B 3d522dcea0daeee87a67699b9f056310bd628b51add09587607cb0e45668e8d33c9afed12cb15ad299da539f3acab3868e1c1a1a8ac426f3b9afcdf7b26f808d SHA512 09a9a4eb7c7037440cc1c90acbbf5f4c726fb2d531f3b41c46f47e1d9418677a8f335a16aa58697c6a3f7035d18dda9275af95a4f40cea3e9b854117b8ed1e32
+=======
+DIST v4.1.1.zip 2710698 BLAKE2B 515de82f549b98a5fd603cc3b0aa48bbfd15eb0955304cfecd5df43516c790b65d2cb29ce55ab06ff0f30fc469d416b14a2e0717bd93ef0e21140a0c89819bcc SHA512 f7c96567303bca4e94ed3cc3e7141558e4088c2afcfedbf1a443e3685513ca2e9e2da4163127885caf2e93fa8ed92abbca4449f396ba60e20ca3c848e0845f37
+>>>>>>> parent of 592219d (Remove mozjpeg till I figure out how to build it, and make it a replacement for libjpeg-turbo)

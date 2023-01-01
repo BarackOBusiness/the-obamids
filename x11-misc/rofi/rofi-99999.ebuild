@@ -13,10 +13,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE="+drun test +window"
+RESTRICT="!test? ( test )"
 
 BDEPEND="
 	sys-devel/bison
-	sys-devel/flex
+	>=sys-devel/flex-2.5.39
 	virtual/pkgconfig
 "
 RDEPEND="
@@ -42,11 +43,16 @@ DEPEND="
 	test? ( >=dev-libs/check-0.11 )
 "
 
+src_prepare() {
+	default
+}
+
 src_configure() {
 	local emesonargs=(
-		$(meson_use drun)
-		$(meson_use window)
+			$(meson_use drun)
+			$(meson_use window)
 	)
+
 	meson_src_configure
 }
 
